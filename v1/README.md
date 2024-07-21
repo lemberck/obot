@@ -1,22 +1,39 @@
 
 # Simplified Perplexity AI Assistant - Version 1
 
-This application is a simplified AI assistant powered by OpenAI's GPT-4o model. It uses Gradio to provide a user-friendly web interface where users can interact with the AI assistant, receive responses, see follow-up questions bsed on chat context and current query, and download their conversation history.
+This project is a straightforward AI assistant application that interacts directly with OpenAI's GPT-4o model. The assistant is designed to process user queries, provide accurate and helpful responses, and generate insightful follow-up questions. It uses Gradio to provide a user-friendly web interface where users can interact with the AI assistant, receive responses, see follow-up questions based on chat context and current query, and download their conversation history.
+
+## Features
+- **Direct Interaction with GPT-4o API**: Utilizes OpenAI's GPT-4o model to generate high-quality responses and follow-up questions.
+- **User-Friendly Interface**: Implements Gradio for an intuitive and interactive user experience.
+- **Memory Management**: Maintains conversation history for context-aware interactions.
+- **Download Conversation History:** Download the entire conversation history as a text file.
+- **Logging and Error Handling**: Uses Loguru for robust logging and error management.
 
 ## Project Structure
 
-```
-obot/
-├── logs/
+```bash
+OBOT/
 ├── v1/
-│   ├── flagged/
-│   ├── app.py
-│   ├── chat_history.txt
-├── .env_template
+│   ├── dev/
+│   │   └── dev.py
+│   ├── flagged/ # stores interactions flagged by the user
+│   └── src/
+│       ├── chat_history.txt # can be downloaded by the user
+│       ├── generate_response.py
+│       ├── gradio_interface.py
+│       ├── main.py
+│       └── utils.py
+├── .env # edited env_template
 ├── .gitignore
-├── pyproject.toml
 ├── poetry.lock
+└── pyproject.toml
+
 ```
+## Context-Aware Interactions
+
+The assistant maintains a conversation history to ensure context-aware interactions. By keeping track of previous exchanges, the assistant can provide coherent responses and generate relevant follow-up questions, making the conversation more meaningful and personalized.
+
 
 ## Setup Instructions
 
@@ -29,13 +46,14 @@ obot/
 
 1. **Clone the repository:**
    ```sh
-   git clone <repository_url>
+   git clone https://github.com/lemberck/obot.git
    cd obot/v1
    ```
 
-2. **Create a virtual environment and install dependencies:**
+2. **Install the dependencies and Activate a Virtual Environment using Poetry:**
    ```sh
    poetry install --no-root
+   poetry shell
    ```
 
 3. **Set up environment variables:**
@@ -45,31 +63,23 @@ obot/
      OPENAI_API_KEY=your_openai_api_key
      ```
 
+## Usage
+
 ### Running the Application
 
-1. **Navigate to the `v1` directory:**
-   ```sh
-   cd v1
-   ```
+To start the application, run the following command:
 
-2. **Run the application:**
-   ```sh
-   python app.py
-   ```
+```sh
+python src/main.py
+```
 
-3. **Access the web interface:**
-   - After running the application, it will provide a local URL (e.g., `http://127.0.0.1:7860`) and a public URL for accessing the interface, which can also be shared with the team. Open the provided URL in a web browser to start interacting with the AI assistant.
+### Interacting with the Assistant
+- Enter your query in the input textbox.
+- The assistant will process your query, provide a response, and suggest follow-up questions.
+- The conversation history and follow-up questions will be displayed in the interface.
+- You can download the conversation history at any time.
 
-### Features
+![gptapi-ui-preview](https://github.com/lemberck/obot/blob/master/img/v1-gptapi.png)
 
-- **Interactive Chat Interface:** Type your queries and receive responses from the AI assistant.
-- **Follow-up Questions:** The assistant generates follow-up questions based on the conversation context and the user current query.
-- **Download Conversation History:** Download the entire conversation history as a text file.
-
-### Logs
-
-- Logs are stored in the `logs/` directory and are rotated daily with a retention period of one week and compressed to save space.
-
-### Flagged Content
-
-- Flagged conversations are stored in the `v1/flagged/` directory.
+### Error Handling and Logging
+The application uses Loguru for logging and error handling. Log files are stored in `logs/v1_app.log`  and can be reviewed for debugging and monitoring purposes.

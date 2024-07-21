@@ -9,6 +9,7 @@ This project is an advanced AI assistant application that leverages the power of
 - **Large Language Model Processing**: Powered by OpenAI's GPT-4o model to provide high-quality responses and follow-up questions.
 - **Memory Management**: Maintains conversation history for context-aware interactions.
 - **User-Friendly Interface**: Implements Gradio for an intuitive and interactive user experience.
+- **Download Conversation History:** Download the entire conversation history as a text file.
 - **Logging and Error Handling**: Uses Loguru for robust logging and error management.
 
 ## Project Structure
