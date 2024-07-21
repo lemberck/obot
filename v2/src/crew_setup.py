@@ -1,10 +1,6 @@
 import os
-from dotenv import load_dotenv
 from crewai import Agent, Task, Crew
 from loguru import logger
-
-load_dotenv(os.path.join(os.path.dirname(__file__), '..', '.env'))
-logger.add("logs/v2_app.log", rotation="1 day", retention="1 week", compression="zip")
 
 ######################## Answer User Agent
 answer_user_agent = Agent(

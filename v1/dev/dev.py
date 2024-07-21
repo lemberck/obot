@@ -114,7 +114,7 @@ def save_conversation_to_file(conversation_history):
         str: The file path where the conversation history is saved.
     """
     full_conversation = format_conversation(conversation_history)
-    file_path = "v1/chat_history.txt"
+    file_path = "v1/dev/chat_history.txt"
     with open(file_path, "w") as file:
         file.write(full_conversation)
     return file_path
@@ -149,6 +149,6 @@ demo = gr.Interface(
     ],
     title="Simplified Perplexity AI Assistant",
     description="Ask anything and get responses powered by OpenAI's GPT-4o.",
-    flagging_dir='v1/flagged',
+    flagging_dir='flagged',
 )
 demo.launch(share=True)
