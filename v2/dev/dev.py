@@ -212,7 +212,7 @@ def save_conversation_to_file(conversation_history):
         str: The file path where the conversation history is saved.
     """
     full_conversation = format_conversation(conversation_history)
-    file_path = "v2/chat_history.txt"
+    file_path = "v2/dev/chat_history.txt"
     with open(file_path, "w") as file:
         file.write(full_conversation)
     return file_path
