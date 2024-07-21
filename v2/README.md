@@ -86,7 +86,7 @@ python src/main.py
 
 > Gradio will also generate a public link that can be shared, functional for 72h.
 
-
+![multiagent-ui-preview](https://github.com/lemberck/obot/blob/master/img/v2-multiagent.png)
 ### Interacting with the Assistant
 - Enter your query in the input textbox.
 - The assistant will process your query, provide a response, and suggest follow-up questions.
