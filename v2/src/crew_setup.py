@@ -1,4 +1,3 @@
-import os
 from crewai import Agent, Task, Crew
 from loguru import logger
 

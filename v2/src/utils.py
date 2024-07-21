@@ -64,7 +64,7 @@ def save_conversation_to_file(conversation_history):
     """
     try:
         full_conversation = format_conversation(conversation_history)
-        file_path = "v2/src/chat_history.txt"
+        file_path = "src/chat_history.txt"
         with open(file_path, "w") as file:
             file.write(full_conversation)
         return file_path
