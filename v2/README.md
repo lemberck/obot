@@ -86,12 +86,13 @@ python src/main.py
 
 > Gradio will also generate a public link that can be shared, functional for 72h.
 
-![multiagent-ui-preview](https://github.com/lemberck/obot/blob/master/img/v2-multiagent.png)
 ### Interacting with the Assistant
 - Enter your query in the input textbox.
 - The assistant will process your query, provide a response, and suggest follow-up questions.
 - The conversation history and follow-up questions will be displayed in the interface.
 - You can download the conversation history at any time.
+
+![multiagent-ui-preview](https://github.com/lemberck/obot/blob/master/img/v2-multiagent.png)
 
 ### Error Handling and Logging
 The application uses Loguru for logging and error handling. Log files are stored in `logs/v2_app.log`  and can be reviewed for debugging and monitoring purposes.
