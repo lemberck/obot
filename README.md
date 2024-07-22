@@ -18,6 +18,7 @@ OBOT/
 ├── v1/ # folder containing version 1 of tha assistant - gpt API approach
 │   ├── dev/
 │   │   └── dev.py
+│   ├── .env # use env_template as a base    
 │   ├── flagged/ 
 │   ├── logs/
 │   │   └── v1_app.log
@@ -30,6 +31,7 @@ OBOT/
 ├── v2/ # folder containing version 2 of tha assistant - multiagent approach
 │   ├── dev/
 │   │   └── dev.py
+│   ├── .env # use env_template as a base
 │   ├── flagged/ 
 │   ├── logs/
 │   │   └── v2_app.log
@@ -39,7 +41,7 @@ OBOT/
 │       ├── gradio_interface.py
 │       ├── main.py
 │       └── utils.py
-├── .env # edited env_template
+├── .env_template # use as base for .env for versions 1 and 2
 ├── .gitignore
 ├── poetry.lock
 └── pyproject.toml
