@@ -41,27 +41,30 @@ The assistant maintains a conversation history to ensure context-aware interacti
 
 - Python 3.10
 - Poetry for dependency management
+- Open AI API Key
 
 ### Environment Configuration
 
-1. **Clone the repository:**
+1. **Clone the repository and open your code IDE in the project directory:**
    ```sh
    git clone https://github.com/lemberck/obot.git
-   cd obot/v1
+   cd obot
    ```
 
-2. **Install the dependencies and Activate a Virtual Environment using Poetry:**
+2. **Install the dependencies and Activate a Virtual Environment using Poetry at the version 1 directory:**
    ```sh
+   cd v1
    poetry install --no-root
    poetry shell
    ```
 
 3. **Set up environment variables:**
-   - Create a `.env` file in the root directory based on the `.env_template`.
+   - Create a `.env` file in the root directory of the project. Use `.env_template` as a template.
    - Add your OpenAI API key to the `.env` file:
      ```
      OPENAI_API_KEY=your_openai_api_key
      ```
+   > Note: Must keep OPENAI_MODEL_NAME
 
 ## Usage
 

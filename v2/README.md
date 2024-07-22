@@ -53,27 +53,26 @@ The assistant maintains a conversation history to ensure context-aware interacti
 
 ## Installation
 
-1. **Clone the Repository**:
+1. **Clone the repository and open your code IDE in the project directory:**:
     ```sh
     git clone https://github.com/lemberck/obot.git
-    cd obot/v2
+    cd obot
     ```
 
-2. **Install the dependencies and Activate a Virtual Environment using Poetry**:
+2. **Install the dependencies and Activate a Virtual Environment using Poetry at the version 2 directory**:
     ```sh
+    cd v2
     poetry install --no-root
     poetry shell
     ```
 
 3. **Set Up Environment Variables**:
-    Copy the `.env_template` to `.env` and fill in your OpenAI API key:
-    ```sh
-    cp .env_template .env
-    ```
-    Then, edit the `.env` file to include your OpenAI API key:
-    ```env
-    OPENAI_API_KEY='your_openai_api_key'
-    ```
+    - Create a `.env` file in the root directory of the project. Use `.env_template` as a template.
+    - Add your OpenAI API key to the `.env` file:
+     ```
+     OPENAI_API_KEY=your_openai_api_key
+     ```
+   > Note: Must keep OPENAI_MODEL_NAME env.
 
 ## Usage
 
