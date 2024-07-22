@@ -4,6 +4,12 @@ This is a sophisticated AI assistant designed to enhance user interactions by le
 - [README v1](https://github.com/lemberck/obot/blob/master/v1/README.md)
 - [README v2](https://github.com/lemberck/obot/blob/master/v2/README.md)
 
+## Requirements
+- Python
+- Poetry
+- Open AI API Key
+
+
 ## Project Structure
 ```bash
 OBOT/
