@@ -20,6 +20,8 @@ OBOT/
 ├── v2/
 │   ├── dev/
 │   │   └── dev.py
+│   ├── poetry.lock
+│   ├── pyproject.toml
 │   ├── .env # use env_template as a base
 │   ├── flagged/ # stores interactions flagged by the user
 │   └── src/
@@ -29,9 +31,7 @@ OBOT/
 │       ├── main.py
 │       └── utils.py
 ├── .env_template
-├── .gitignore
-├── poetry.lock
-└── pyproject.toml
+└── .gitignore
 ```
 
 ## Agents

@@ -18,7 +18,9 @@ OBOT/
 ├── v1/ # folder containing version 1 of tha assistant - gpt API approach
 │   ├── dev/
 │   │   └── dev.py
-│   ├── .env # use env_template as a base    
+│   ├── .env # use env_template as a base
+│   ├── poetry.lock
+│   ├── pyproject.toml    
 │   ├── flagged/ 
 │   ├── logs/
 │   │   └── v1_app.log
@@ -32,6 +34,8 @@ OBOT/
 │   ├── dev/
 │   │   └── dev.py
 │   ├── .env # use env_template as a base
+│   ├── poetry.lock
+│   ├── pyproject.toml
 │   ├── flagged/ 
 │   ├── logs/
 │   │   └── v2_app.log
@@ -42,9 +46,7 @@ OBOT/
 │       ├── main.py
 │       └── utils.py
 ├── .env_template # use as base for .env for versions 1 and 2
-├── .gitignore
-├── poetry.lock
-└── pyproject.toml
+└── .gitignore
 ```
 
 ## Overview

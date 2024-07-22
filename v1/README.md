@@ -18,6 +18,8 @@ OBOT/
 │   ├── dev/
 │   │   └── dev.py
 │   ├── .env # use env_template as a base
+│   ├── poetry.lock
+│   ├── pyproject.toml
 │   ├── flagged/ # stores interactions flagged by the user
 │   └── src/
 │       ├── chat_history.txt # can be downloaded by the user
@@ -26,10 +28,7 @@ OBOT/
 │       ├── main.py
 │       └── utils.py
 ├── .env_template
-├── .gitignore
-├── poetry.lock
-└── pyproject.toml
-
+└── .gitignore
 ```
 ## Context-Aware Interactions
 
