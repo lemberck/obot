@@ -17,6 +17,7 @@ OBOT/
 ├── v1/
 │   ├── dev/
 │   │   └── dev.py
+│   ├── .env # use env_template as a base
 │   ├── flagged/ # stores interactions flagged by the user
 │   └── src/
 │       ├── chat_history.txt # can be downloaded by the user
@@ -24,7 +25,7 @@ OBOT/
 │       ├── gradio_interface.py
 │       ├── main.py
 │       └── utils.py
-├── .env # edited env_template
+├── .env_template
 ├── .gitignore
 ├── poetry.lock
 └── pyproject.toml
@@ -45,21 +46,20 @@ The assistant maintains a conversation history to ensure context-aware interacti
 
 ### Environment Configuration
 
-1. **Clone the repository and open your code IDE in the project directory:**
+1. **Clone the repository and open your code IDE in the version directory:**:
    ```sh
    git clone https://github.com/lemberck/obot.git
-   cd obot
+   cd obot/v1
    ```
 
-2. **Install the dependencies and Activate a Virtual Environment using Poetry at the version 1 directory:**
+2. **Install the dependencies and Activate a Virtual Environment using Poetry**:
    ```sh
-   cd v1
    poetry install --no-root
    poetry shell
    ```
 
 3. **Set up environment variables:**
-   - Create a `.env` file in the root directory of the project. Use `.env_template` as a template.
+   - Create a `.env` file **inside v1 directory**. Use `.env_template` as a base.
    - Add your OpenAI API key to the `.env` file:
      ```
      OPENAI_API_KEY=your_openai_api_key
